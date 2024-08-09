@@ -5,10 +5,14 @@
 {% endblock %}
 
 {% block content %}
+    <h1> Lista de tareas </h1>
     <ul>
     {% for task in tasks_list %}
 
         <li> {{ task }}</li>
+    {% empty %}
+
+        <h3> No se ha agregado ninguna tarea </h3>
 
     {% endfor %}
     </ul>
